@@ -13,6 +13,5 @@ datalogger.setColumnTitles(
 "tovut",
 "tugog",
 "zitaz",
-"tataz",
-"tugog"
+"tataz"
 )
