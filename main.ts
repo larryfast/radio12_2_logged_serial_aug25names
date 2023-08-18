@@ -3,10 +3,12 @@ input.onButtonPressed(Button.A, function () {
 })
 radio.onReceivedValue(function (name, value) {
     led.toggle(0, 0)
-    serial.writeValue(name, value)
+    datalogger.mirrorToSerial(true)
+    datalogger.log(datalogger.createCV(name, value))
 })
 radio.setGroup(12)
 basic.showIcon(IconNames.House)
+datalogger.mirrorToSerial(true)
 datalogger.setColumnTitles(
 "tovut",
 "tugog",
