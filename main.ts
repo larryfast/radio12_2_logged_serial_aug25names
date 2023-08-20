@@ -1,5 +1,20 @@
 input.onButtonPressed(Button.A, function () {
     datalogger.deleteLog()
+    basic.showLeds(`
+        # # # # .
+        # . . # .
+        # # # # .
+        # . # . .
+        # . . # .
+        `)
+    basic.pause(2000)
+    basic.showLeds(`
+        # . # # .
+        # . . . #
+        # . . # .
+        # . # . .
+        # . # # #
+        `)
 })
 radio.onReceivedValue(function (name, value) {
     led.toggle(1, 0)
